@@ -3,9 +3,15 @@
 :root{
     --color-bg : black;
     --color-fg : white;
+    --color-fg-s: hsl(0, 0%, 95%);
+
     --font-default: "Roboto", sans-serif;
     --title-fw: bolder;
     --default-fw: 300;
+
+    --padding-d : 1rem;
+    --padding-s : 0.25rem;
+    --gap-d : 1rem;
 }
 
 *, *>*{
@@ -13,7 +19,7 @@
     font-weight: var(--title-fw);
 }
 body {
-    background-color: black;
+    background-color: var(--color-bg);
     padding: 0;
     margin: 0;
     border: 0;
@@ -21,10 +27,10 @@ body {
 }
 
 nav {
-    background-color: white;
+    background-color: var(--color-fg);
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: var(--padding-d);
 }
 
 nav > ul {
@@ -34,6 +40,7 @@ nav a {
     text-decoration: none;
     color: black;
 }
+
 .title{
     flex: 1;
     text-align: center;
@@ -42,7 +49,37 @@ nav a {
 .login_container{
     position: absolute;
     right: -50%;
-    background-color: wheat;
+    background-color: var(--color-fg-s);
     width: 25vw;
-    height: auto;
+    padding: var(--padding-d);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_frm{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-d);
+}
+
+.login_frm > input {
+    padding: var(--padding-s);
+    border: none;
+    border-radius: .25rem;
+}
+
+.login_frm_btns {
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--gap-d);
+}
+
+.login_frm_btns > button{
+    flex: 1;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
 }

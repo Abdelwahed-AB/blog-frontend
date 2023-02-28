@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap');
+
+:root{
+    --color-bg : black;
+    --color-fg : white;
+    --font-default: "Roboto", sans-serif;
+    --title-fw: bolder;
+    --default-fw: 300;
+}
+
+*, *>*{
+    font-family: var(--font-default);
+    font-weight: var(--title-fw);
+}
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav > ul {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+.title{
+    flex: 1;
+    text-align: center;
+}
+
+.login_container{
+    position: absolute;
+    right: -50%;
+    background-color: wheat;
+    width: 25vw;
+    height: auto;
+}
